@@ -1,0 +1,25 @@
+<template name="chat">
+	<form role="form">
+		<div class="form-group">
+	    <label for="exampleInputEmail1">Select chat room:</label>
+	    <select id="room-select" class="form-control">
+	    	<option value="">--Select room--</option>
+	    	{{#each chats}}
+			  <option value="{{chatTitle}}">{{chatTitle}}</option>
+			  {{/each}}			  
+			</select>
+	  </div>
+	  <div class="form-group">
+	  	<button class="btn btn-success form-control" id="add-room">Add room</button>
+		</div>
+		{{#if roomSelected}}
+	  <div class="form-group">
+	    <label for="exampleInputEmail1">{{chatText}}:</label>
+	    <textarea type="text" class="form-control" id="chat-area" rows="15"></textarea>
+	  </div>
+	  <div>Updated at {{updatedAt}}, by {{updatedBy}}</div>
+	  {{else}}
+	  	<h2>Please, select room.</h2>
+	  {{/if}}
+	</form>
+</template>

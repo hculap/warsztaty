@@ -1,0 +1,8 @@
+<head>
+  <title>Prezentacja</title>
+</head>
+
+<body>
+  <object class="svg-object" data="/Rysunek.svg" type="image/svg+xml"></object>
+</body>
+
