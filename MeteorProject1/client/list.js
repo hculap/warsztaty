@@ -12,7 +12,7 @@ Template.list.events({
         var id = $(e.target).attr("id");
         Names.update(id, {
             $inc: {
-                points: 5
+                points: 1
             }
         });
     }
